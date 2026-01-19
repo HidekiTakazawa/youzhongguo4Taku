@@ -226,6 +226,16 @@
   </div>
 
   <script>
+    // --- PWA Service Worker Registration ---
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful');
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
     // ★★★ ここにGASのウェブアプリURLを貼り付けてください ★★★
     const GAS_API_URL = "https://script.google.com/macros/s/AKfycbx_3-Ed9tSC5b83UWfmojXCYohnVOjA5qrQP7YCnrAQqvUmzaeRPiOzrtvI2_NEczN-WQ/exec"; 
 
