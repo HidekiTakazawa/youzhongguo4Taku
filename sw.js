@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lang-app-cache-v2';
+const CACHE_NAME = 'youzhongguo4taku-app-cache-v3';
 const urlsToCache = [
   './',
   './index.html',
